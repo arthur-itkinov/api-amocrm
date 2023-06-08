@@ -4,10 +4,10 @@ with open('refresh_token.txt', 'r') as access:
     refresh_token = access.read()
 
 tokens.default_token_manager(
-    client_id="f5c13476-5c79-4c25-9eac-7a0b8c5a7a18",
-    client_secret="IGQ8TsVIZWntM0reoCJkVuYWYM6UEhnIeTl4cBUlyCduD8UzWZemsaEtp5surpAY",
-    subdomain="fortunaperm",
-    redirect_url="https://aktivkredit.ru/",
+    client_id="xxx", # client_id скопировать из настроек интеграции амосрм
+    client_secret="xxx", # client_secret скопировать из настроек интеграции амосрм
+    subdomain="xxx", # скопировать из настроек интеграции амосрм или из uri
+    redirect_url="xxx", # скопировать из настроек интеграции амосрм
     storage=tokens.FileTokensStorage(),  # by default FileTokensStorage
 )
-tokens.default_token_manager.init(code="def502001260fd307e3eb9423c49f9d8b1b0ff9173d2d89ec2485af37a64d4f4d00a9e6c29c1b88e173b9cced8c9ac5e2b62c0d92cd41034b7ec8c9fa3345a571213d1df65adb3eaa6723e37bd26ad3ce237aa767897f555a4d0bd0a85333174c733a94bbb46d8873756996c78022f145bfb42a8d0385e6dae0c26f574e42de1a776a53d682a8e8e227d3772b65667e03e86621e7bd2c58f7cb54a42c3f79d98d6e55539d6191b9b6966227006643dbe53e042df7eebd82e73ab9b7045cb949dd44a5aa2b268423c46ac22a8eece482c03dc491d33c7a0d372e20ebbbf9d647834434db0b1068ec3cc467308f62888cd12ca0d6e6f55f55251b5551ad9c2457b3192063d12cf9f04a689aa3924b23e12d9a1df21c4c24ac6becd1964b881e701292c5897b3221a2bc270b7c520ba4a9876cf66fe9b646062117e1810a1f8f16fd982e4ee05633adb168257cb505a7a8f99db10fbf5e49a98f8668796efbf1f1ae56281790fb84b1cd62bed595e61a23a0b09e4acd019f026810d582c235b534de19d81194521f509df6a426737ffb6eadb90bf942138fe45d2f596694cf0ea3586a179d0b7a4a26c55b537dad4abf7d043d3c8581af6b3795d435a724fb800d2789d21b63ff98e6e0394b39ed59961928e400d386c4ebb542bbf1955da24668b655361825203d559", skip_error=False)
+tokens.default_token_manager.init(code="xxx", skip_error=False) # cкопировать из настроек интеграции амосрм !!! действует 20 минут !!!
