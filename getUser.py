@@ -1,7 +1,7 @@
 import requests
 from getEmtity import emtity
 
-
+subdomain = "xxx" # скопировать из настроек интеграции амосрм или из адресной строки
 def getUser(idLead):
     idUser = emtity(idLead)
     with open('access_token.txt', 'r') as access:
@@ -13,7 +13,7 @@ def getUser(idLead):
         "Content-Type": "application/json"
     }
 
-    url = f'https://fortunaperm.amocrm.ru/api/v4/contacts/{idUser}'
+    url = f'https://{subdomain}.amocrm.ru/api/v4/contacts/{idUser}'
     res = requests.get(url, headers=header)
     result = res.json()
 
