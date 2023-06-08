@@ -21,10 +21,10 @@ yearback = dateback.strftime("%Y")
 
 
 def send_email(toEmail):
-    sender = 'itkinov6@gmail.com'
-    passwd = "xvisibffirlmkuni"
+    sender = 'xxx' # указать почту
+    passwd = "xxx" # указать пароль для сторонних приложений
 
-    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server = smtplib.SMTP("smtp.gmail.com", 587) # настройки сервера 
     server.starttls()
 
     try:
