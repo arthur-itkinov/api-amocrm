@@ -39,9 +39,10 @@ params = {
     "useFilter": 'y'
 }
 
+subdomain = "xxx" # скопировать из интеграции амо или из адресной строки
 
 def cron_get_leads_post_email():
-    url = f'https://fortunaperm.amocrm.ru/api/v4/leads'
+    url = f'https://{subdomain}.amocrm.ru/api/v4/leads'
     res = requests.get(url, headers=header, params=params)
     if res.status_code == 200:
         result = res.json()
