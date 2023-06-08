@@ -2,6 +2,7 @@ import requests
 
 
 def emtity(idLead):
+    subdomain = "xxx" # скопировать из настроек интеграции или из адресной строки
     with open('access_token.txt', 'r') as access:
         access_token = access.read()
 
@@ -15,7 +16,7 @@ def emtity(idLead):
     }
     id = '29155773'
 
-    url = f'https://fortunaperm.amocrm.ru/api/v4/leads/{idLead}/links'
+    url = f'https://{subdomain}.amocrm.ru/api/v4/leads/{idLead}/links'
     res = requests.get(url, headers=header)
     result = res.json()
     userId = result['_embedded']['links'][0]['to_entity_id']
